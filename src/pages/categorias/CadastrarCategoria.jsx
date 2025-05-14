@@ -1,6 +1,6 @@
-import Navbar from "../../../components/ui/Navbar";
+import Navbar from "../../components/ui/Navbar";
 
-function Livros() {
+function CadastrarCategoria() {
   return (
     <div>
       <Navbar />
@@ -64,4 +64,4 @@ function Livros() {
   );
 }
 
-export default Livros;
+export default CadastrarCategoria;
