@@ -6,11 +6,17 @@ function Navbar() {
         <a href="/" className="font-bold text-xl">
           Biblioteca 2k25
         </a>
-        <a href="/cadastrar_categoria" className="hover:underline">
-          <span>Cadastrar Categoria</span>
+        <a href="/cadastrocategoria" className="hover:underline">
+          <span>Categorias</span>
         </a>
-        <a href="/listar_categoria" className="hover:underline">
-          <span>Listar Categoria</span>
+        <a href="/listacategoria" className="hover:underline">
+          <span>Listagens</span>
+        </a>
+        <a href="/editoras" className="hover:underline">
+          <span>Editoras</span>
+        </a>
+        <a href="/livros" className="hover:underline">
+          <span>Livros</span>
         </a>
       </div>
 

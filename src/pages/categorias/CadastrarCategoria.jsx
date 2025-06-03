@@ -1,6 +1,14 @@
 import Navbar from "../../components/ui/Navbar";
+import { useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function CadastrarCategoria() {
+  const navegacao = useNavigate();
+  const { id } = useParams();
+  const voltar = () => {
+    navegacao("/listacategoria");
+  };
+  const [nomecategoria, setNomeCategoria] = useState("");
   return (
     <div>
       <Navbar />
@@ -9,38 +17,29 @@ function CadastrarCategoria() {
 
         <form>
           <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">
-              Email address
-            </label>
+            <label className="block text-sm font-medium mb-1">Código</label>
             <input
-              type="email"
+              type="text"
               className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="gremio@meajuda.com"
+              value={id}
             />
-            <p className="text-sm text-gray-500 mt-1">
-              We'll never share your email with anyone else.
-            </p>
           </div>
 
           <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">Senha</label>
-            <input
-              type="password"
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Senha"
-            />
-          </div>
-
-          <div className="flex items-center mb-4">
-            <input id="check" type="checkbox" className="mr-2" />
-            <label htmlFor="check" className="text-sm">
-              Captcha
+            <label className="block text-sm font-medium mb-1">
+              Nome da Categoria
             </label>
+            <input
+              type="text"
+              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={nomecategoria}
+              onChange={(evento) => setNomeCategoria(evento.target.value)}
+            />
           </div>
 
           <div className="flex gap-2">
             <button
-              type="submit"
+              type="button"
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
               Salvar
@@ -54,11 +53,13 @@ function CadastrarCategoria() {
             <button
               type="button"
               className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
+              onClick={() => voltar()}
             >
               Cancelar
             </button>
           </div>
         </form>
+        <h1>{nomecategoria}</h1>
       </div>
     </div>
   );
