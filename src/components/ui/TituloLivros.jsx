@@ -1,4 +1,4 @@
-function Titulo(props) {
+function TituloLivros(props) {
   return (
     <div className="bg-blue-100 border border-blue-200 rounded p-4 mb-6">
       <h2 className="text-xl font-bold text-blue-800 mb-1">{props.titulo}</h2>
@@ -13,4 +13,4 @@ function Titulo(props) {
   );
 }
 
-export default TituloEditoras;
+export default TituloLivros;
