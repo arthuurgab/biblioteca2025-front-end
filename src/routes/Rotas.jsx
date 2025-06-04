@@ -6,7 +6,8 @@ import Editoras from "../pages/editora/Editoras";
 import CadastroEditoras from "../pages/editora/FormEditora";
 import Livros from "../pages/livros/Livros";
 import CadastroLivro from "../pages/livros/FormLivro";
-
+import Usuarios from "../pages/usuarios/Usuarios";
+import CadastroUsuario from "../pages/usuarios/FormUsuarios";
 function Rotas() {
   return (
     <div className="container">
@@ -23,6 +24,10 @@ function Rotas() {
         <Route path="/livros" element={<Livros />} />
         <Route path="/cadastrolivro" element={<CadastroLivro />} />
         <Route path="/cadastrolivro/:id" element={<CadastroLivro />} />
+
+        <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/cadastrousuarios" element={<CadastroUsuario />} />
+        <Route path="/cadastrousuarios/:id" element={<CadastroUsuario />} />
       </Routes>
     </div>
   );

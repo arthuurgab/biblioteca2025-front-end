@@ -18,6 +18,9 @@ function Navbar() {
         <a href="/livros" className="hover:underline">
           <span>Livros</span>
         </a>
+        <a href="/usuarios" className="hover:underline">
+          <span>Usuários</span>
+        </a>
       </div>
 
       {/* Campo de busca */}
